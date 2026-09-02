@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#17121c" />
+    <meta name="description" content="Roam through Pinebarrow, a living storybook world that grows around you." />
+    <title>Pinebarrow — The Living Storybook World</title>
+    <meta property="og:title" content="Pinebarrow — The Living Storybook World" />
+    <meta property="og:description" content="Explore a warm, dynamically generated 3D world beyond Pinebarrow village." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://drhexium.github.io/pines-x-site/" />
+    <meta property="og:image" content="https://drhexium.github.io/pines-x-site/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pinebarrow — The Living Storybook World" />
+    <meta name="twitter:description" content="Explore a warm, dynamically generated 3D world beyond Pinebarrow village." />
+    <meta name="twitter:image" content="https://drhexium.github.io/pines-x-site/og.png" />
+    <script type="module" crossorigin src="/pines-x-site/assets/index-CmzJZba4.js"></script>
+    <link rel="stylesheet" crossorigin href="/pines-x-site/assets/index-D7yPSm37.css">
+  </head>
+  <body>
+    <main class="game-shell" aria-label="Pinebarrow exploration game">
+      <canvas id="game" tabindex="0" aria-label="A controllable character exploring the living 3D world of Pinebarrow"></canvas>
+
+      <div class="hud" aria-hidden="false">
+        <header class="brand-panel glass-panel">
+          <p class="eyebrow">The storybook wilds</p>
+          <h1>Pinebarrow</h1>
+          <p class="location" id="location">Pinebarrow Village</p>
+        </header>
+
+        <div class="compass glass-panel" aria-label="Camera heading">
+          <span class="compass-mark">N</span>
+          <span class="compass-line" aria-hidden="true"></span>
+          <strong id="heading">N</strong>
+        </div>
+
+        <div class="top-controls glass-panel" aria-label="World controls">
+          <button class="icon-button" type="button" data-effect="sunlight" aria-label="Toggle sunlight" aria-pressed="true">
+            <span aria-hidden="true">✦</span><small>Sun</small><kbd>1</kbd>
+          </button>
+          <button class="icon-button" type="button" data-effect="rain" aria-label="Toggle rain" aria-pressed="false">
+            <span aria-hidden="true">╱╱</span><small>Rain</small><kbd>2</kbd>
+          </button>
+          <button class="icon-button" type="button" data-effect="fireflies" aria-label="Toggle fireflies" aria-pressed="true">
+            <span class="firefly-icon" aria-hidden="true">•</span><small>Glow</small><kbd>3</kbd>
+          </button>
+          <button class="icon-button" id="pause" type="button" aria-label="Pause game" aria-pressed="false">
+            <span aria-hidden="true">Ⅱ</span><small>Pause</small><kbd>Space</kbd>
+          </button>
+        </div>
+
+        <section class="quest-card glass-panel" aria-label="Exploration objective">
+          <span class="quest-gem" aria-hidden="true">◆</span>
+          <div>
+            <small>OPEN JOURNAL</small>
+            <p>Follow any road. The world forms ahead of you.</p>
+          </div>
+        </section>
+
+        <section class="world-stats glass-panel" aria-label="World position">
+          <div><small>POSITION</small><strong id="coordinates">0 · 0</strong></div>
+          <div><small>REGIONS</small><strong id="regions">25 loaded</strong></div>
+        </section>
+
+        <canvas id="minimap" class="minimap glass-panel" width="240" height="240" aria-label="Local area map"></canvas>
+
+        <div class="movement-help glass-panel">
+          <span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> Move</span>
+          <span><kbd>Drag</kbd> Look</span>
+          <span><kbd>Wheel</kbd> Zoom</span>
+          <span><kbd>Shift</kbd> Run</span>
+        </div>
+
+        <div class="joystick" id="joystick" aria-label="Touch movement control">
+          <span id="joystick-stick"></span>
+        </div>
+
+        <button class="interaction-prompt glass-panel" id="interaction-prompt" type="button"><kbd>E</kbd> <span>Interact</span></button>
+        <p class="status-toast" id="toast" aria-live="polite">Welcome home, wanderer.</p>
+      </div>
+      <p id="status" class="sr-only" aria-live="polite"></p>
+    </main>
+  </body>
+</html>
